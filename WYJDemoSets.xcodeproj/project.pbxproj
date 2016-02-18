@@ -9,12 +9,19 @@
 /* Begin PBXBuildFile section */
 		E117B4C31C746D69005E8009 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E117B4C21C746D69005E8009 /* main.m */; };
 		E117B4C61C746D69005E8009 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E117B4C51C746D69005E8009 /* AppDelegate.m */; };
-		E117B4C91C746D69005E8009 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E117B4C81C746D69005E8009 /* ViewController.m */; };
-		E117B4CC1C746D69005E8009 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E117B4CA1C746D69005E8009 /* Main.storyboard */; };
+		E117B4C91C746D69005E8009 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E117B4C81C746D69005E8009 /* HomeViewController.m */; };
 		E117B4CE1C746D69005E8009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E117B4CD1C746D69005E8009 /* Assets.xcassets */; };
 		E117B4D11C746D69005E8009 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E117B4CF1C746D69005E8009 /* LaunchScreen.storyboard */; };
 		E117B4DC1C746D69005E8009 /* WYJDemoSetsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E117B4DB1C746D69005E8009 /* WYJDemoSetsTests.m */; };
 		E117B4E71C746D69005E8009 /* WYJDemoSetsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E117B4E61C746D69005E8009 /* WYJDemoSetsUITests.m */; };
+		E117B4FE1C7478B4005E8009 /* CycleScrollViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E117B4FB1C7478B4005E8009 /* CycleScrollViewVC.m */; };
+		E117B4FF1C7478B4005E8009 /* WYJInfiniteScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E117B4FD1C7478B4005E8009 /* WYJInfiniteScrollView.m */; };
+		E1A694C11C75694000FB82F7 /* CycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A694C01C75694000FB82F7 /* CycleScrollView.m */; };
+		E1A694D81C75BCA600FB82F7 /* NSString+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A694D11C75BCA600FB82F7 /* NSString+Utility.m */; };
+		E1A694D91C75BCA600FB82F7 /* UIColor+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A694D31C75BCA600FB82F7 /* UIColor+Utility.m */; };
+		E1A694DA1C75BCA600FB82F7 /* UIImage+ResizeMagick.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A694D51C75BCA600FB82F7 /* UIImage+ResizeMagick.m */; };
+		E1A694DB1C75BCA600FB82F7 /* UIImage+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A694D71C75BCA600FB82F7 /* UIImage+Utility.m */; };
+		E1A694DE1C75BCC400FB82F7 /* WYJDispatchTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A694DD1C75BCC400FB82F7 /* WYJDispatchTimer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +46,8 @@
 		E117B4C21C746D69005E8009 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E117B4C41C746D69005E8009 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E117B4C51C746D69005E8009 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E117B4C71C746D69005E8009 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E117B4C81C746D69005E8009 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E117B4CB1C746D69005E8009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E117B4C71C746D69005E8009 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		E117B4C81C746D69005E8009 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		E117B4CD1C746D69005E8009 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E117B4D01C746D69005E8009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E117B4D21C746D69005E8009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +57,23 @@
 		E117B4E21C746D69005E8009 /* WYJDemoSetsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WYJDemoSetsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E117B4E61C746D69005E8009 /* WYJDemoSetsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYJDemoSetsUITests.m; sourceTree = "<group>"; };
 		E117B4E81C746D69005E8009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E117B4F41C747082005E8009 /* WYJDemoSets-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WYJDemoSets-Prefix.pch"; sourceTree = "<group>"; };
+		E117B4FA1C7478B4005E8009 /* CycleScrollViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CycleScrollViewVC.h; path = CycleScrollView/CycleScrollViewVC.h; sourceTree = "<group>"; };
+		E117B4FB1C7478B4005E8009 /* CycleScrollViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CycleScrollViewVC.m; path = CycleScrollView/CycleScrollViewVC.m; sourceTree = "<group>"; };
+		E117B4FC1C7478B4005E8009 /* WYJInfiniteScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WYJInfiniteScrollView.h; path = CycleScrollView/WYJInfiniteScrollView.h; sourceTree = "<group>"; };
+		E117B4FD1C7478B4005E8009 /* WYJInfiniteScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WYJInfiniteScrollView.m; path = CycleScrollView/WYJInfiniteScrollView.m; sourceTree = "<group>"; };
+		E1A694BF1C75694000FB82F7 /* CycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CycleScrollView.h; path = CycleScrollView/CycleScrollView.h; sourceTree = "<group>"; };
+		E1A694C01C75694000FB82F7 /* CycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CycleScrollView.m; path = CycleScrollView/CycleScrollView.m; sourceTree = "<group>"; };
+		E1A694D01C75BCA600FB82F7 /* NSString+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Utility.h"; path = "WYJDemoSets/tools/Category/NSString+Utility.h"; sourceTree = SOURCE_ROOT; };
+		E1A694D11C75BCA600FB82F7 /* NSString+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Utility.m"; path = "WYJDemoSets/tools/Category/NSString+Utility.m"; sourceTree = SOURCE_ROOT; };
+		E1A694D21C75BCA600FB82F7 /* UIColor+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Utility.h"; path = "WYJDemoSets/tools/Category/UIColor+Utility.h"; sourceTree = SOURCE_ROOT; };
+		E1A694D31C75BCA600FB82F7 /* UIColor+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Utility.m"; path = "WYJDemoSets/tools/Category/UIColor+Utility.m"; sourceTree = SOURCE_ROOT; };
+		E1A694D41C75BCA600FB82F7 /* UIImage+ResizeMagick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ResizeMagick.h"; path = "WYJDemoSets/tools/Category/UIImage+ResizeMagick.h"; sourceTree = SOURCE_ROOT; };
+		E1A694D51C75BCA600FB82F7 /* UIImage+ResizeMagick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ResizeMagick.m"; path = "WYJDemoSets/tools/Category/UIImage+ResizeMagick.m"; sourceTree = SOURCE_ROOT; };
+		E1A694D61C75BCA600FB82F7 /* UIImage+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Utility.h"; path = "WYJDemoSets/tools/Category/UIImage+Utility.h"; sourceTree = SOURCE_ROOT; };
+		E1A694D71C75BCA600FB82F7 /* UIImage+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Utility.m"; path = "WYJDemoSets/tools/Category/UIImage+Utility.m"; sourceTree = SOURCE_ROOT; };
+		E1A694DC1C75BCC400FB82F7 /* WYJDispatchTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WYJDispatchTimer.h; path = tools/WYJDispatchTimer.h; sourceTree = "<group>"; };
+		E1A694DD1C75BCC400FB82F7 /* WYJDispatchTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WYJDispatchTimer.m; path = tools/WYJDispatchTimer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +124,12 @@
 		E117B4C01C746D69005E8009 /* WYJDemoSets */ = {
 			isa = PBXGroup;
 			children = (
+				E1A694CF1C75BC5900FB82F7 /* tools */,
 				E117B4C41C746D69005E8009 /* AppDelegate.h */,
 				E117B4C51C746D69005E8009 /* AppDelegate.m */,
-				E117B4C71C746D69005E8009 /* ViewController.h */,
-				E117B4C81C746D69005E8009 /* ViewController.m */,
-				E117B4CA1C746D69005E8009 /* Main.storyboard */,
+				E117B4C71C746D69005E8009 /* HomeViewController.h */,
+				E117B4C81C746D69005E8009 /* HomeViewController.m */,
+				E117B4F51C747427005E8009 /* Demos */,
 				E117B4CD1C746D69005E8009 /* Assets.xcassets */,
 				E117B4CF1C746D69005E8009 /* LaunchScreen.storyboard */,
 				E117B4D21C746D69005E8009 /* Info.plist */,
@@ -118,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				E117B4C21C746D69005E8009 /* main.m */,
+				E117B4F41C747082005E8009 /* WYJDemoSets-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,6 +163,52 @@
 				E117B4E81C746D69005E8009 /* Info.plist */,
 			);
 			path = WYJDemoSetsUITests;
+			sourceTree = "<group>";
+		};
+		E117B4F51C747427005E8009 /* Demos */ = {
+			isa = PBXGroup;
+			children = (
+				E117B4F91C74783C005E8009 /* CycleScrollView */,
+			);
+			name = Demos;
+			sourceTree = "<group>";
+		};
+		E117B4F91C74783C005E8009 /* CycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				E117B4FA1C7478B4005E8009 /* CycleScrollViewVC.h */,
+				E117B4FB1C7478B4005E8009 /* CycleScrollViewVC.m */,
+				E1A694BF1C75694000FB82F7 /* CycleScrollView.h */,
+				E1A694C01C75694000FB82F7 /* CycleScrollView.m */,
+				E117B4FC1C7478B4005E8009 /* WYJInfiniteScrollView.h */,
+				E117B4FD1C7478B4005E8009 /* WYJInfiniteScrollView.m */,
+			);
+			name = CycleScrollView;
+			sourceTree = "<group>";
+		};
+		E1A694C21C75BC4900FB82F7 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				E1A694D01C75BCA600FB82F7 /* NSString+Utility.h */,
+				E1A694D11C75BCA600FB82F7 /* NSString+Utility.m */,
+				E1A694D21C75BCA600FB82F7 /* UIColor+Utility.h */,
+				E1A694D31C75BCA600FB82F7 /* UIColor+Utility.m */,
+				E1A694D41C75BCA600FB82F7 /* UIImage+ResizeMagick.h */,
+				E1A694D51C75BCA600FB82F7 /* UIImage+ResizeMagick.m */,
+				E1A694D61C75BCA600FB82F7 /* UIImage+Utility.h */,
+				E1A694D71C75BCA600FB82F7 /* UIImage+Utility.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		E1A694CF1C75BC5900FB82F7 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				E1A694C21C75BC4900FB82F7 /* Category */,
+				E1A694DC1C75BCC400FB82F7 /* WYJDispatchTimer.h */,
+				E1A694DD1C75BCC400FB82F7 /* WYJDispatchTimer.m */,
+			);
+			name = tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,7 +316,6 @@
 			files = (
 				E117B4D11C746D69005E8009 /* LaunchScreen.storyboard in Resources */,
 				E117B4CE1C746D69005E8009 /* Assets.xcassets in Resources */,
-				E117B4CC1C746D69005E8009 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +340,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E117B4C91C746D69005E8009 /* ViewController.m in Sources */,
+				E1A694D91C75BCA600FB82F7 /* UIColor+Utility.m in Sources */,
+				E1A694D81C75BCA600FB82F7 /* NSString+Utility.m in Sources */,
+				E1A694DB1C75BCA600FB82F7 /* UIImage+Utility.m in Sources */,
+				E1A694C11C75694000FB82F7 /* CycleScrollView.m in Sources */,
+				E117B4FF1C7478B4005E8009 /* WYJInfiniteScrollView.m in Sources */,
+				E117B4C91C746D69005E8009 /* HomeViewController.m in Sources */,
+				E1A694DA1C75BCA600FB82F7 /* UIImage+ResizeMagick.m in Sources */,
+				E117B4FE1C7478B4005E8009 /* CycleScrollViewVC.m in Sources */,
+				E1A694DE1C75BCC400FB82F7 /* WYJDispatchTimer.m in Sources */,
 				E117B4C61C746D69005E8009 /* AppDelegate.m in Sources */,
 				E117B4C31C746D69005E8009 /* main.m in Sources */,
 			);
@@ -308,14 +386,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E117B4CA1C746D69005E8009 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E117B4CB1C746D69005E8009 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E117B4CF1C746D69005E8009 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -411,7 +481,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WYJDemoSets/WYJDemoSets-Prefix.pch";
 				INFOPLIST_FILE = WYJDemoSets/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baidu.-.WYJDemoSets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -422,7 +495,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WYJDemoSets/WYJDemoSets-Prefix.pch";
 				INFOPLIST_FILE = WYJDemoSets/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baidu.-.WYJDemoSets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -496,6 +572,7 @@
 				E117B4ED1C746D69005E8009 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E117B4EE1C746D69005E8009 /* Build configuration list for PBXNativeTarget "WYJDemoSetsTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +581,7 @@
 				E117B4F01C746D69005E8009 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E117B4F11C746D69005E8009 /* Build configuration list for PBXNativeTarget "WYJDemoSetsUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +590,7 @@
 				E117B4F31C746D69005E8009 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

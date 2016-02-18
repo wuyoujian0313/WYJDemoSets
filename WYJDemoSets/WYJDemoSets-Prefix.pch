@@ -1,0 +1,32 @@
+//
+//  WYJDemoSets-Prefix.pch
+//  WYJDemoSets
+//
+//  Created by wuyj on 16/2/17.
+//  Copyright © 2016年 wuyj. All rights reserved.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_7_0
+#warning "This project uses features only available in iOS SDK 7.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif
+
+#define IsIOS7 ([[[[UIDevice currentDevice] systemVersion] substringToIndex:1] intValue]>=7)
+#define IsIOS8 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+#define navigationBarHeight (IsIOS7 ? 64 : 44)
+
+#define screenHeight [UIScreen mainScreen].bounds.size.height
+#define screenWidth [UIScreen mainScreen].bounds.size.width
+
+#if DEBUG
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...) {}
+#endif
+
