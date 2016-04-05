@@ -13,7 +13,7 @@
 
 @property(nonatomic, strong) WYJInfiniteScrollView  *infiniteScrollView;
 @property(nonatomic, strong) UIPageControl *pageControl;
-@property (nonatomic, strong) WYJDispatchTimer *timer;
+@property(nonatomic, strong) WYJDispatchTimer *timer;
 
 @end
 
@@ -35,12 +35,13 @@
     self.timer = [WYJDispatchTimer createDispatchTimerInterval:_interval delegate:self];
     [self.timer startDispatchTimer];
     
-//    CycleScrollView *wself = self;
+//    __weak CycleScrollView *wself = self;
 //    self.timer = [WYJDispatchTimer createDispatchTimerInterval:_interval block:^{
 //        CycleScrollView *sself = wself;
 //        
 //        [sself autoJumpPage];
 //    }];
+//    [self.timer startDispatchTimer];
 }
 
 - (void)autoJumpPage {
@@ -82,6 +83,7 @@
     [self addSubview:_pageControl];
     
     _interval = 3.0;
+    _pageControlPos = PageControlPositionCenter;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -102,8 +104,22 @@
     return self;
 }
 
-- (void)reloadData {
+- (void)reloadData {    
     [self.infiniteScrollView reloadData];
+}
+
+- (void)setPageControlPos:(PageControlPosition)pageControlPos {
+    _pageControlPos = pageControlPos;
+    
+    CGFloat left = 10;
+    if (_pageControlPos == PageControlPositionCenter) {
+        left = (self.frame.size.width - 10*_pageControl.numberOfPages)/2.0;
+    } else if (_pageControlPos == PageControlPositionLeft) {
+        left = 10;
+    } else if (_pageControlPos == PageControlPositionRight) {
+        left = self.frame.size.width - 10*_pageControl.numberOfPages - 10;
+    }
+    _pageControl.frame = CGRectMake(left, self.frame.size.height - 15, 10*_pageControl.numberOfPages, 10);
 }
 
 #pragma mark -  infiniteScrollView delegate
@@ -116,7 +132,16 @@
     // 配置pageController
     
     _pageControl.numberOfPages = number;
-    _pageControl.frame = CGRectMake((self.frame.size.width - 10*_pageControl.numberOfPages)/2.0, self.frame.size.height - 15, 10*_pageControl.numberOfPages, 10);
+    
+    CGFloat left = 10;
+    if (_pageControlPos == PageControlPositionCenter) {
+        left = (self.frame.size.width - 10*_pageControl.numberOfPages)/2.0;
+    } else if (_pageControlPos == PageControlPositionLeft) {
+        left = 10;
+    } else if (_pageControlPos == PageControlPositionRight) {
+        left = self.frame.size.width - 10*_pageControl.numberOfPages - 10;
+    }
+    _pageControl.frame = CGRectMake(left, self.frame.size.height - 15, 10*_pageControl.numberOfPages, 10);
     [_pageControl setCurrentPage:scrollView.currentIndex];
     
     return number;

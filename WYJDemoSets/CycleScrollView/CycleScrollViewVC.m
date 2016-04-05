@@ -26,7 +26,8 @@
     CycleScrollView *scrollView = [[CycleScrollView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width - 0, 60)];
     scrollView.infiniteDelegate = self;
     scrollView.dataSource = self;
-    scrollView.interval = 1.0;
+    scrollView.interval = 3.0;
+    scrollView.pageControlPos = PageControlPositionLeft;
     [scrollView autoScroll];
     self.infiniteScrollView = scrollView;
     [self.view addSubview:scrollView];
@@ -58,7 +59,7 @@
     }
     
     // set properties
-    NSInteger mods = index % [self numberOfItemsInInfiniteScrollView:scrollView];
+    NSInteger mods = index ;
     if (mods < 0) mods += [self numberOfItemsInInfiniteScrollView:scrollView];
     CGFloat red = mods * (1 / (CGFloat)[self numberOfItemsInInfiniteScrollView:scrollView]);
     item.backgroundColor = [UIColor colorWithRed:red green:0.0 blue:0.0 alpha:1.0];
@@ -70,7 +71,7 @@
 }
 
 - (NSUInteger)numberOfItemsInInfiniteScrollView:(WYJInfiniteScrollView *)scrollView {
-    return 3;
+    return 0;
 }
 
 - (CGFloat)infiniteScrollView:(WYJInfiniteScrollView *)scrollView widthForIndex:(NSInteger)index {

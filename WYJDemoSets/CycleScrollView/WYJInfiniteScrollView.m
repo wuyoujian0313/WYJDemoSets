@@ -69,17 +69,29 @@
 	if (!self.dataSource) return;
 	
 	NSUInteger totalItems = [self.dataSource numberOfItemsInInfiniteScrollView:self];
+    
+    if (totalItems  <= 0) {
+        return;
+    }
+    
 	CGSize totalGridSize = CGSizeMake(0.0, self.bounds.size.height);
 	for (int i = 0; i < totalItems; i++) {
 		totalGridSize.width += [self.dataSource infiniteScrollView:self widthForIndex:i];
 	}
 	
-	self.contentSize = CGSizeMake(totalGridSize.width*2, totalGridSize.height);
+	self.contentSize = CGSizeMake(totalGridSize.width, totalGridSize.height);
 	self.containerView.frame = CGRectMake(0, 0, self.contentSize.width, self.contentSize.height);
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     // If not dragging, send event to next responder
+    
+    NSUInteger totalItems = [self.dataSource numberOfItemsInInfiniteScrollView:self];
+    if (totalItems  <= 0) {
+        return;
+    }
+
+    
     if (!self.dragging) {
         UITouch *touch = [touches anyObject];
         CGPoint newPoint = [touch locationInView:self];
@@ -94,6 +106,13 @@
 }
 
 - (void)jumpToIndex:(NSInteger)index {
+    
+    NSUInteger totalItems = [self.dataSource numberOfItemsInInfiniteScrollView:self];
+    
+    if (totalItems  <= 0) {
+        return;
+    }
+
     
     if ((self.isCircular && index < 0) &&
 		(self.isCircular && index >= [self.dataSource numberOfItemsInInfiniteScrollView:self]))
@@ -163,6 +182,13 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
+    
+    NSUInteger totalItems = [self.dataSource numberOfItemsInInfiniteScrollView:self];
+    
+    if (totalItems  <= 0) {
+        return;
+    }
+
     
     [self recenterIfNecessary];
     

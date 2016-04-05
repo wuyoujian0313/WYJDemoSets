@@ -16,6 +16,10 @@
 
 @implementation WYJDispatchTimer
 
+- (void)dealloc {
+    [self releaseDispatchTimer];
+}
+
 + (WYJDispatchTimer *)createDispatchTimerInterval:(NSUInteger)interval delegate:(id <WYJDispatchTimerDelegate>)delegate {
     WYJDispatchTimer *wyjTimer = [[[self class] alloc] init];
     wyjTimer.delegate = delegate;
@@ -28,7 +32,6 @@
     dispatch_source_set_timer(wyjTimer.timer, start, dur, 0);
     
     // 设置回调
-    
     __weak WYJDispatchTimer *wTimer = wyjTimer;
     dispatch_source_set_event_handler(wyjTimer.timer,^{
     
@@ -63,10 +66,16 @@
     dispatch_resume(self.timer);
 }
 
+- (void)suspendDispatchTimer {
+    // 挂起定时器
+    dispatch_suspend(self.timer);
+}
 
 - (void)releaseDispatchTimer {
-    dispatch_cancel(self.timer);
-    self.timer = nil;
+    if (self.timer) {
+        dispatch_cancel(self.timer);
+        self.timer = nil;
+    }
 }
 
 @end
